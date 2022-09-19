@@ -1,17 +1,17 @@
-import Board from './components/Board';
-import Start from './components/Start';
-import './index.css';
+import { useContext } from "react";
+import Board from "./components/board";
+import Modal from "./components/modal";
+import Start from "./components/start";
+import { GameContext } from "./context/GameContex";
 
 function App() {
+  const { screen } = useContext(GameContext);
   return (
-    <div className="App flex justify-center items-center min-h-screen">
-
-
-      <div className=' max-w-md w-full py-8 px-4'>
-        <Start />
-        <Board />
+    <div className="App">
+      <div className="container">
+        {screen === "start" ? <Start /> : <Board />}
       </div>
-      
+      <Modal />
     </div>
   );
 }
