@@ -5,11 +5,60 @@
 * {
   margin: 0;
   padding: 0;
-
 }
 
 html {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
   font-size: 16;
+}
+
+body {
+  @apply bg-bg-dark text-gray-dark
+}
+
+.player--active {
+  @apply bg-gray-dark shadow-slate-500
+}
+
+.btn-yellow {
+  @apply bg-yellow text-bg-dark border-none font-bold uppercase rounded-lg py-3 px-6 shadow-yellow-dark shadow-md mb-2 duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-yellow-dark active:shadow-sm active:translate-y-1 active:shadow-yellow-dark
+}
+
+.btn-blue {
+  @apply  bg-blue text-bg-dark border-none font-bold uppercase rounded-lg py-3 px-6 shadow-blue-dark shadow-md mb-2 duration-200 hover:-translate-y-1 hover:shadow-lg hover:shadow-blue-dark active:shadow-sm active:translate-y-1 active:shadow-blue-dark
+}
+
+.btn-gray {
+
+}
+
+.icon {
+  display: inline-block;
+}
+.icon svg {
+  @apply fill-gray-dark;
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+}
+.icon-sm svg {
+  width: 30px;
+  height: 30px;
+}
+.icon-lg svg {
+  width: 65px;
+  height: 65px;
+}
+.icon-yellow svg {
+  @apply fill-yellow
+  
+}
+.icon-blue svg {
+  @apply fill-blue
+  
+}
+.icon-dark svg {
+  @apply fill-bg-dark
+  
 }
